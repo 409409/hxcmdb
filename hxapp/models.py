@@ -20,6 +20,12 @@ class Host(models.Model):
     due_time = models.DateField(verbose_name=u'过期时间')
     status = models.IntegerField(verbose_name=u'使用状态')
 
+    def __unicode__(self):
+        return self.name
+
+    class Meta:
+        verbose_name = u'主机列表'
+
 class User(models.Model):
     name = models.CharField(max_length=40, verbose_name=u'用户名称')
     password = models.CharField(max_length=40, verbose_name=u'用户密码')
