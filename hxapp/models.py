@@ -32,6 +32,7 @@ class Host(models.Model):
 
     class Meta:
         verbose_name = u'主机列表'
+        verbose_name_plural = u'主机列表'
 
 class User(models.Model):
     name = models.CharField(max_length=40, verbose_name=u'用户名称')
@@ -49,6 +50,7 @@ class User(models.Model):
 
     class Meta:
         verbose_name = u'用户列表'
+        verbose_name_plural = u'用户列表'
 
 class Order(models.Model):
     hostname = models.CharField(max_length=40, verbose_name=u'主机名称')
@@ -67,4 +69,5 @@ class Order(models.Model):
 
     class Meta:
         verbose_name = u'订单列表'
+        verbose_name_plural = u'订单列表'
 # Create your models here.
