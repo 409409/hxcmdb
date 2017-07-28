@@ -64,7 +64,7 @@ class Order(models.Model):
     status = models.IntegerField(verbose_name=u'申请单状态')
 
     def __unicode__(self):
-        return self.id
+        return self.hostname
 
 
     class Meta:
