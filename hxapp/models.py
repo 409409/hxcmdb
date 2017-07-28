@@ -9,6 +9,12 @@ class Idc(models.Model):
     create_time = models.DateField(verbose_name=u'创建时间')
     status = models.IntegerField(verbose_name=u'使用状态')
 
+    def __unicode__(self):
+        return self.name
+
+    class Meta:
+        verbose_name = u'供应商列表'
+
 class Host(models.Model):
     name = models.CharField(max_length=40, verbose_name=u'主机名称')
     ip = models.GenericIPAddressField(unique=True, verbose_name=u'IP地址')
@@ -37,6 +43,12 @@ class User(models.Model):
     last_ip = models.CharField(max_length=40, verbose_name=u'用户最后登录IP')
     last_time = models.DateField(verbose_name=u'用户最后登录时间')
 
+    def __unicode__(self):
+        return self.name
+
+    class Meta:
+        verbose_name = u'用户列表'
+
 class Order(models.Model):
     hostname = models.CharField(max_length=40, verbose_name=u'主机名称')
     username = models.CharField(max_length=40, verbose_name=u'用户名称')
@@ -47,4 +59,11 @@ class Order(models.Model):
     pay_status = models.IntegerField(verbose_name=u'付款状态')
     examine_status = models.IntegerField(verbose_name=u'审核状态')
     status = models.IntegerField(verbose_name=u'申请单状态')
+
+    def __unicode__(self):
+        return self.id
+
+
+    class Meta:
+        verbose_name = u'订单列表'
 # Create your models here.
