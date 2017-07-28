@@ -14,6 +14,7 @@ class Idc(models.Model):
 
     class Meta:
         verbose_name = u'供应商列表'
+        verbose_name_plural = u'供应商列表'
 
 class Host(models.Model):
     name = models.CharField(max_length=40, verbose_name=u'主机名称')
