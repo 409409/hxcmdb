@@ -11,7 +11,7 @@ class Idc(models.Model):
 
 class Host(models.Model):
     name = models.CharField(max_length=40, verbose_name=u'主机名称')
-    ip = models.IPAddressField(unique=True, verbose_name=u'IP地址')
+    ip = models.GenericIPAddressField(unique=True, verbose_name=u'IP地址')
     address_name = models.CharField(max_length=40, verbose_name=u'主机所在机房')
     purpose = models.CharField(max_length=40, verbose_name=u'主机用途')
     idc_name = models.CharField(max_length=40, verbose_name=u'主机所在供应商')
